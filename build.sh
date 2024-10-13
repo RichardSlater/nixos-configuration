@@ -23,4 +23,6 @@ diff configuration_merged.nix configuration.nix
 cp ./configuration_merged.nix /etc/nixos/configuration.nix
 cp ./${HOST}/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
 
+rm configuration_merged.nix
+
 sudo nixos-rebuild switch
