@@ -1,0 +1,11 @@
+[Unit]
+Description=Test Webserver
+After=local-fs.target
+
+[Container]
+Image=nginxdemos/hello
+PublishPort=8080:80
+
+[Install]
+# Start by default on boot
+WantedBy=multi-user.target default.target
