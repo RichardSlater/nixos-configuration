@@ -21,6 +21,6 @@ cat ./configuration.nix | envsubst "$USER_HASHED_PASSWORD" > ./configuration_mer
 diff configuration_merged.nix configuration.nix
 
 cp ./configuration_merged.nix /etc/nixos/configuration.nix
-cp ./${HOST}/hardware-configuration.nix /etc/nixos/configuration.nix
+cp ./${HOST}/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
 
 sudo nixos-rebuild switch

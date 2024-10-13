@@ -85,7 +85,7 @@ in
     pkgs.gcc
     pkgs.gnumake
     pkgs.yarn
-    pkgs.envsubst
+    pkgs.gettext
   ];
 
   environment.etc."systemd/user-generators/podman-user-generator" = {
