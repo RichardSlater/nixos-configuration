@@ -17,7 +17,7 @@ export USER_HASHED_PASSWORD
 export HOST
 
 echo "Substituting variables"
-cat ./configuration.nix | envsubst "$USER_HASHED_PASSWORD" > ./configuration_merged.nix
+envsubst '$USER_HASHED_PASSWORD' < ./configuration.nix > ./configuration_merged.nix
 diff configuration_merged.nix configuration.nix
 
 cp ./configuration_merged.nix /etc/nixos/configuration.nix
